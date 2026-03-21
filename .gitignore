@@ -9,3 +9,5 @@ DerivedData/
 *.log
 *.dSYM/
 *.dSYM.zip
+jm_ok/
+Data/log
