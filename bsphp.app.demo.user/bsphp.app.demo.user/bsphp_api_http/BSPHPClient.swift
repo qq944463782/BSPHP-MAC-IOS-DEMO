@@ -236,10 +236,19 @@ final class BSPHPClient {
         let aesKeyFull = BSPHPCrypto.md5Hex(config.serverPrivateKey + timeMd5)
         let aesKey = String(aesKeyFull.prefix(16))
 
-        let encryptedB64 = try BSPHPCrypto.aes128CBCEncryptBase64(plaintext: dataStr, key16: aesKey)
-        let sigMd5 = BSPHPCrypto.md5Hex(encryptedB64)
-        let signatureContent = "0|AES-128-CBC|\(aesKey)|\(sigMd5)|json"
-        let rsaB64 = try BSPHPCrypto.rsaEncryptPKCS1Base64(message: signatureContent, publicKeyBase64DER: config.clientPublicKey)
+        let encryptedB64: String
+        let rsaB64: String
+        do {
+            encryptedB64 = try BSPHPCrypto.aes128CBCEncryptBase64(plaintext: dataStr, key16: aesKey)
+            let sigMd5 = BSPHPCrypto.md5Hex(encryptedB64)
+            let signatureContent = "0|AES-128-CBC|\(aesKey)|\(sigMd5)|json"
+            rsaB64 = try BSPHPCrypto.rsaEncryptPKCS1Base64(message: signatureContent, publicKeyBase64DER: config.clientPublicKey)
+        } catch {
+            print("[BSPHP] ========== 请求加密失败（故无「加密后」「解密前」）==========")
+            print("[BSPHP] api: \(api) 错误: \(error)")
+            print("[BSPHP] 常见原因：clientPublicKey 须为后台「客户端公钥」；勿与 serverPrivateKey 对调；须与 mutualkey 对应应用一致")
+            throw error
+        }
 
         let payload = "\(encryptedB64)|\(rsaB64)"
         var allowed = CharacterSet.alphanumerics

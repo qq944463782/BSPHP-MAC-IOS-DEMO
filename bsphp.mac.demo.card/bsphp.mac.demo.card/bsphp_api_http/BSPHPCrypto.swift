@@ -6,8 +6,10 @@
 //  与 Python bsphp/http.py 协议兼容
 //
 
+import CryptoKit
 import Foundation
 import Security
+import CommonCrypto
 
 // MARK: - 错误类型
 
@@ -29,13 +31,9 @@ enum BSPHPCryptoError: Error {
 /// - RSA PKCS#1：签名加密、响应解密
 enum BSPHPCrypto {
 
-    /// MD5 十六进制字符串
+    /// MD5 十六进制字符串（BSPHP 协议要求；使用 CryptoKit `Insecure.MD5` 避免 CommonCrypto 弃用告警）
     static func md5Hex(_ string: String) -> String {
-        let data = Data(string.utf8)
-        var digest = [UInt8](repeating: 0, count: Int(CC_MD5_DIGEST_LENGTH))
-        data.withUnsafeBytes { ptr in
-            _ = CC_MD5(ptr.baseAddress, CC_LONG(data.count), &digest)
-        }
+        let digest = Insecure.MD5.hash(data: Data(string.utf8))
         return digest.map { String(format: "%02x", $0) }.joined()
     }
 
