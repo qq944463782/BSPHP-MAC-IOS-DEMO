@@ -2,7 +2,8 @@
 //  CardMainControlPanelWindowHost.swift
 //  bsphp.mac.demo.card
 //
-//  在独立 NSWindow 中承载主控制面板
+//  用 NSWindow + NSHostingController 承载 CardMainControlPanelView；
+//  已打开时再次 present 会前置窗口；关闭时回调 onSessionEnd 清理状态。
 //
 
 import AppKit

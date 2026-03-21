@@ -2,17 +2,21 @@
 //  CardMainControlPanelView.swift
 //  bsphp.mac.demo.card
 //
-//  卡密验证通过后的主控制面板（独立页面）
+//  卡密 / 机器码登录成功后在「独立 NSWindow」中展示的主控制面板：
+//  聚合常用 .ic/.in 调试按钮（到期、心跳、自定义配置、绑定本机等）与售卡 Web 入口。
 //
 
 import SwiftUI
 import AppKit
 
-/// 售卡 / 续费 webapi 链接（与 daihao 一致时改这里）
+// MARK: - 售卡 Web（浏览器打开，非 AppEn 加密接口）
+
+/// 售卡 / 续费 webapi 链接（与后台 daihao 一致时改这里）
 enum BSPHPCardSaleWeb {
-    private static let renewURLBase = "http://localhost:8000/index.php?m=webapi&c=salecard_renew&a=index&daihao=66666666"
-    static let genURL = "http://localhost:8000/index.php?m=webapi&c=salecard_gencard&a=index&daihao=66666666"
-    static let stockURL = "http://localhost:8000/index.php?m=webapi&c=salecard_salecard&a=index&daihao=66666666"
+    //后台地址->软件管理->软件配置->软件销售
+    private static let renewURLBase = "https://demo.bsphp.com/index.php?m=webapi&c=salecard_renew&a=index&daihao=66666666"
+    static let genURL = "https://demo.bsphp.com/index.php?m=webapi&c=salecard_gencard&a=index&daihao=66666666"
+    static let stockURL = "https://demo.bsphp.com/index.php?m=webapi&c=salecard_salecard&a=index&daihao=66666666"
 
     /// 续费链接，附带 `user` 查询参数（一般为当前卡号 `loggedCardId`）
     static func renewURL(forUser user: String) -> String {
@@ -31,7 +35,9 @@ enum BSPHPCardSaleWeb {
     }
 }
 
-/// 主控制面板：卡模式常用接口与后台入口
+// MARK: - 主控制面板视图
+
+/// 依赖已登录的 `BSPHPClient` 会话，展示卡号、到期与各类 API 快捷调用。
 struct CardMainControlPanelView: View {
     let client: BSPHPClient
     let loggedCardId: String

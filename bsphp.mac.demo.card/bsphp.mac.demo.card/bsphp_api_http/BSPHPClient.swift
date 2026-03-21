@@ -5,6 +5,10 @@
 //  BSPHP API 客户端：AppEn 默认接口（卡模式 .ic / 公共 .in）
 //  参考：BSPHP-Python案例Aes加密 / bsphp/main.py
 //
+//  在 bsphp.mac.demo.card 中与 UI 的配合要点：
+//  - 任何业务请求前需先 `bootstrap()`（会话 BSphpSeSsL）
+//  - `machineCode`：本机特征（硬件 UUID 或持久化 UUID），用于 login.ic 的 key/maxoror 等
+//
 
 import Foundation
 #if canImport(IOKit)

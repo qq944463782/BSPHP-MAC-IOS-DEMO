@@ -2,17 +2,35 @@
 //  ContentView.swift
 //  bsphp.mac.demo.card
 //
-//  Created by enzu zhou on 2026/3/20.
+//  卡模式（AppEn .ic）演示主界面：
+//  - Tab1 卡密：login.ic 验证 → 独立窗口「主控制面板」
+//  - Tab2 机器码：AddCardFeatures.key.ic + login.ic 验证；充值续费子页 chong.ic
+//  配置项见 BSPHPCardConfig（与 BSPHP 后台应用密钥一致）。
 //
 
 import SwiftUI
 
+// MARK: - 本地配置（AppEn URL / mutualKey / RSA 密钥）
+
+/// 卡模式演示用的 BSPHP 连接参数，对应后台「软件管理 → 当前应用」里的 **AppEn 接口地址** 与 **通信密钥 / RSA 密钥对**。
+///
+/// **注意**
+/// - `url` / `mutualKey` / 两把 RSA 必须同属一个应用；任一改错会导致解密失败或 `appsafecode` 校验失败。
+/// - `serverPrivateKey` 用于 **解密服务器响应**（须与后台「服务器私钥」一致）；勿与 `clientPublicKey` 对调。
+/// - `clientPublicKey` 用于 **加密发往服务器的签名段**（须与后台「客户端公钥」一致）。
+/// - 演示站可与正式站切换：只改本枚举内常量，勿提交真实商业密钥到公开仓库。
 private enum BSPHPCardConfig {
-    static let url = "http://demo.bsphp.com/AppEn.php?appid=66666666&m=3a9d8b17c0a10b1b77f0544d35e835fa&lang=0"
+    /// AppEn 完整入口 URL（含 `appid`、`m` 通信密码、`lang` 等查询参数），POST 加密包发往该地址。
+    static let url = "https://demo.bsphp.com/AppEn.php?appid=66666666&m=3a9d8b17c0a10b1b77f0544d35e835fa&lang=0"
+    /// 通信密钥 `mutualkey`，参与请求体并与后台应用绑定；与 Python/Java 等示例中的 mutualkey 同义。
     static let mutualKey = "417a696c5ee663c14bc6fa48b3f53d51"
+    /// 服务器私钥（Base64 DER，PKCS#8）。用于从响应 RSA 段解出 AES 密钥并解密 `response` 正文。
     static let serverPrivateKey = "MIIEqQIBADANBgkqhkiG9w0BAQEFAASCBJMwggSPAgEAAoH+DZkOodN4q3IMn6momlnOTRSQS86cbHQBxePy3gyIxpayPnm11Y0sYbWyFJhDuTSAZYHbzQLRLRZvgQ1Nk1UmEQRxzUCp5Hkhig53CVfoQA5lgXln0Qgyhe5oOXAbeiLdqwkLIw27cOQyico+s2HniSHxPEl0ikqkXj+AWu5/z18x7PmDiSDRDf26cDteSwLv4on7uYWYsQCv+r8RF63l0ZkjjjCe91Z90aEI0ZTiZT6m0yIabHOHWHN4jhI2b++s8AQRDrN4uD317o9Z7gLeBtC+XDt5kvtJFeOfb9U8+wuneiIZkOhMybqnv1/8OzVfomPvub3Rs8+4q6OeEK8CAwEAAQKB/gG+LHHxePYAmD2esU2XVSnsCNKumL4N4GxM20Q6tw09I3t+fh/xCE89yqV5HrUOVaatDk8onUb6KTCRU/AeadKkjzGPqDbwj6vyTq+T5ODQ95Gwze2s70zbUeCKzfrJnT/e2N6VVAEUPqYKlh7H3bVl9FWV1KolBwxNd1YwW5FZsS6wV5OhAS7Jg8AsxQ+DEj7p8CD5JedTjzFC76WbDh33uyEegvnWRADOiixK43mo/IwleZjC/XkSIg6OOkKCo0EXndebKZF8Jw/GrxVidJgAHYG1JiX6f/0TlIhM+EVvwGs5JU2cDpJzGAcB8n/9NRRwACW9ffm/CHj2FeqBAn88dEttycnA9kDt053qnE09z57KN4d2vpLLywzlzpbwUUVfr/vbAy/j4srmpRBZwdso+KKWxv2zr58FWlTcqwZh6pDcVLZg/6W3RP9TqBk5tb3x4XyCAD7e6XOjm6zG84P/cp/Axx9NrYihsHaKT6GJ1ISsFbnoGBsHeOo8w5MlAn85lOc6lwFt2Vgx9SeiB9WJlTuTbBdxoQ1W1DQAPdqfuNgdYUKPBdNbRAO5kULIizB4elh3pWgG2FT+HTos/IR3pAaQmzXqFjAYt2XLFuNeEI9uiuX7jPtYKzpHR6qhCvn5AsgL+QDsK7vtP6HD1IapcD81hH22Z3TKIcRfFfZDAn8HykCSBCegWtshClzWB5AYf/GJQ0CMd6A47JBb6JQgoYhb/TRqE24PYoEc2XZS6p0QGYHyBfBZQC8wpGQ9DzjCU1SZX70koKy9AgIYyJd/jUDNs2203s07Mj/5fCz2chi3SRD26XHKM6tgknmj9wDs3tq9xgrvsnOBMf6VF+qVAn8SGiCzR6O4X/qdAgAqrSHRdevbxcB9BW+HG4EZjlh7nAW8/sWI5wDyESjGnscK+s8LIRNM0eApPrtBg/i1CdGvNw6lSVYiuET4kDddKF3kRXqB+wKgGUsvBa/1lq8qn6PER76SHP7QQFN9G2MEiHypKdOFRJiszktl/EWayvG3An8BTmEK8TCs7Pq9SHQ9DEq6NQPOk5cTt5UN++mp4gqHGifzv3TBy4/+GQ2jm5xZCBJY73yhQ7YpJuVnfoQ+4Ya6PvdiuMWLDXXP0YuWzjWgbSt985dVkTNCyPR0p7NCk3CBTRKmAx7+jNyhFlbvkoAdCoOYqBxyPpbdT5ouDpek"
+    /// 客户端公钥（Base64 DER）。用于构造请求中的 RSA 签名段；与后台保存的「客户端公钥」一致。
     static let clientPublicKey = "MIIBHjANBgkqhkiG9w0BAQEFAAOCAQsAMIIBBgKB/gu5s9VMT323+6PzHKyNyESY0oBHdDgaq7rT5VyG7ETJZtI/Q9gaILfOv+ciobZA0WGlQHi/7ri/TDA1cEszg4uvPDEMw9lCLrY9kof5m3JJhLbJAov072oevMUdDcu92Szyl1qZXQ400zYXNVJDs95JNvvyK5OBIdGVsHi0JbczWMQF9QWYrn8dF8n3WWu8a3abslHV7W/JewBhYLlEgys1SkQqe7eIZfeTGi8elbVoXPwn2Bs+FSzViH9kxp4Out9eDjr/AeCDeuqFR39UfMLPDgXAKKv7HdskCWgZYDJSVk5CM3hpNj6RDBYNor83iurU3Y3+o/EDHNKyvRI3AgMBAAE="
 }
+
+// MARK: - 主界面
 
 struct ContentView: View {
     private let client = BSPHPClient(config: .init(
@@ -27,8 +45,9 @@ struct ContentView: View {
     @State private var noticeMessage = "加载中..."
     @State private var cardInput = ""
     @State private var cardPwd = ""
-    /// 机器码场景专用（与上方登录无关）
+    /// 充值续费：`chong.ic` 的 pwd（界面绑定名历史原因仍为 mcCardId）
     @State private var mcCardId = ""
+    /// 充值续费：`chong.ic` 的 ka 充值卡号
     @State private var mcCardPwd = ""
     /// 默认本机全局机器码（IOPlatformUUID / 持久化 UUID）
     @State private var machineCodeInput = BSPHPClient.machineCode
@@ -45,7 +64,7 @@ struct ContentView: View {
         .frame(minWidth: 520, minHeight: 380)
         .task {
             do {
-                //这里一定要加bootstrap，否则无法使用充值功能 初始化获取sessl就是session的
+                // 必须先 bootstrap：`internet.in` + `BSphpSeSsL.in`，写入会话令牌；否则后续 `.ic`（含 chong.ic）无效。
                 try await client.bootstrap()
                 noticeMessage = (await client.getNotice()).message
             } catch {
@@ -55,6 +74,7 @@ struct ContentView: View {
         }
     }
 
+    /// 公告 + 双 Tab（卡密 | 机器码账号）
     private var mainPanel: some View {
         VStack(spacing: 10) {
             GroupBox("公告") {
@@ -202,6 +222,7 @@ struct ContentView: View {
         }
     }
 
+    /// 卡密模式：`login.ic`；成功 code 1081 等则拉到期并打开主控制面板窗口。
     private func verifyCard() {
         guard !cardInput.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty else {
             statusMessage = "请输入卡串"
@@ -274,6 +295,7 @@ struct ContentView: View {
         }
     }
 
+    /// `internet.in` 连通性
     private func testNet() {
         Task {
             isLoading = true
@@ -282,6 +304,7 @@ struct ContentView: View {
         }
     }
 
+    /// `v.in` 版本信息
     private func checkVersion() {
         Task {
             isLoading = true
@@ -313,6 +336,8 @@ struct ContentView: View {
         }
     }
 }
+
+// MARK: - Preview
 
 #Preview {
     ContentView()

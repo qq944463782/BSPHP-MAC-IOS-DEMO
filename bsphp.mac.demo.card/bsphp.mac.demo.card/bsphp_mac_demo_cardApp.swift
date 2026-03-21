@@ -2,7 +2,7 @@
 //  bsphp_mac_demo_cardApp.swift
 //  bsphp.mac.demo.card
 //
-//  Created by enzu zhou on 2026/3/20.
+//  应用入口：单窗口 SwiftUI，根视图为 ContentView（卡模式 BSPHP 演示）。
 //
 
 import SwiftUI
