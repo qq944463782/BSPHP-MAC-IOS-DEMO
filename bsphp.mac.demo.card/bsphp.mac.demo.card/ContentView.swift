@@ -45,6 +45,7 @@ struct ContentView: View {
         .frame(minWidth: 520, minHeight: 380)
         .task {
             do {
+                //这里一定要加bootstrap，否则无法使用充值功能 初始化获取sessl就是session的
                 try await client.bootstrap()
                 noticeMessage = (await client.getNotice()).message
             } catch {
