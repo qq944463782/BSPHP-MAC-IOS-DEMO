@@ -1,2 +1,18 @@
 # BSPHP-MAC--
 www.bsphp.com 苹果ios mac dylib 调用案例 bsphp验证系统
+
+
+
+bsphp.app.demo.card 卡模式演示app演示
+bsphp.app.demo.user 账号登陆模式app演示
+bsphp.mac.demo 账号模式苹果电脑下演示
+bsphp.mac.demo.card 卡模式苹果电脑下演示
+
+dylib.verify.oc 苹果IOSdylib文件,弹出窗口输入激活码演示 oc版本,VerifyHost项目用调试dylib的运行调用动态库.
+dylib.verify.macos 苹果MACdylib文件,弹出窗口输入激活码演示 oc版本,VerifyHost项目用调试dylib的运行调用动态库.
+
+dylib.mac.card 动态库弹窗口案例，可以用加入写好程序加验证给客户测试版 wift
+
+构建结果
+编译文件路径打开方法
+（在 Xcode 里 Product → Show Build Folder in Finder 也可打开。）
