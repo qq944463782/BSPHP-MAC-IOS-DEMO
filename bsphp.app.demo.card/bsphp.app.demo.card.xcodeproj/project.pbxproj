@@ -6,63 +6,20 @@
 	objectVersion = 77;
 	objects = {
 
-/* Begin PBXContainerItemProxy section */
-		776722E92F6D9F5F0038D37C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 776722D02F6D9F5E0038D37C /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 776722D72F6D9F5E0038D37C;
-			remoteInfo = bsphp.app.demo.card;
-		};
-		776722F32F6D9F5F0038D37C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 776722D02F6D9F5E0038D37C /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 776722D72F6D9F5E0038D37C;
-			remoteInfo = bsphp.app.demo.card;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		776722D82F6D9F5E0038D37C /* bsphp.app.demo.card.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bsphp.app.demo.card.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		776722E82F6D9F5F0038D37C /* bsphp.app.demo.cardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = bsphp.app.demo.cardTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		776722F22F6D9F5F0038D37C /* bsphp.app.demo.cardUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = bsphp.app.demo.cardUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1B2C3D12E5F60718293A4B5 /* bsphp.app.demo.card.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bsphp.app.demo.card.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		776722DA2F6D9F5E0038D37C /* bsphp.app.demo.card */ = {
+		A1B2C3D22E5F60718293A4B5 /* bsphp.app.demo.card */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = bsphp.app.demo.card;
-			sourceTree = "<group>";
-		};
-		776722EB2F6D9F5F0038D37C /* bsphp.app.demo.cardTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = bsphp.app.demo.cardTests;
-			sourceTree = "<group>";
-		};
-		776722F52F6D9F5F0038D37C /* bsphp.app.demo.cardUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = bsphp.app.demo.cardUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		776722D52F6D9F5E0038D37C /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		776722E52F6D9F5F0038D37C /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		776722EF2F6D9F5F0038D37C /* Frameworks */ = {
+		A1B2C3D32E5F60718293A4B5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -72,22 +29,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		776722CF2F6D9F5E0038D37C = {
+		A1B2C3D42E5F60718293A4B5 = {
 			isa = PBXGroup;
 			children = (
-				776722DA2F6D9F5E0038D37C /* bsphp.app.demo.card */,
-				776722EB2F6D9F5F0038D37C /* bsphp.app.demo.cardTests */,
-				776722F52F6D9F5F0038D37C /* bsphp.app.demo.cardUITests */,
-				776722D92F6D9F5E0038D37C /* Products */,
+				A1B2C3D22E5F60718293A4B5 /* bsphp.app.demo.card */,
+				A1B2C3D52E5F60718293A4B5 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		776722D92F6D9F5E0038D37C /* Products */ = {
+		A1B2C3D52E5F60718293A4B5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				776722D82F6D9F5E0038D37C /* bsphp.app.demo.card.app */,
-				776722E82F6D9F5F0038D37C /* bsphp.app.demo.cardTests.xctest */,
-				776722F22F6D9F5F0038D37C /* bsphp.app.demo.cardUITests.xctest */,
+				A1B2C3D12E5F60718293A4B5 /* bsphp.app.demo.card.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -95,134 +48,64 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		776722D72F6D9F5E0038D37C /* bsphp.app.demo.card */ = {
+		A1B2C3D62E5F60718293A4B5 /* bsphp.app.demo.card */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 776722FC2F6D9F5F0038D37C /* Build configuration list for PBXNativeTarget "bsphp.app.demo.card" */;
+			buildConfigurationList = A1B2C3DE2E5F60718293A4B5 /* Build configuration list for PBXNativeTarget "bsphp.app.demo.card" */;
 			buildPhases = (
-				776722D42F6D9F5E0038D37C /* Sources */,
-				776722D52F6D9F5E0038D37C /* Frameworks */,
-				776722D62F6D9F5E0038D37C /* Resources */,
+				A1B2C3D72E5F60718293A4B5 /* Sources */,
+				A1B2C3D32E5F60718293A4B5 /* Frameworks */,
+				A1B2C3D82E5F60718293A4B5 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				776722DA2F6D9F5E0038D37C /* bsphp.app.demo.card */,
+				A1B2C3D22E5F60718293A4B5 /* bsphp.app.demo.card */,
 			);
 			name = bsphp.app.demo.card;
 			packageProductDependencies = (
 			);
 			productName = bsphp.app.demo.card;
-			productReference = 776722D82F6D9F5E0038D37C /* bsphp.app.demo.card.app */;
+			productReference = A1B2C3D12E5F60718293A4B5 /* bsphp.app.demo.card.app */;
 			productType = "com.apple.product-type.application";
-		};
-		776722E72F6D9F5F0038D37C /* bsphp.app.demo.cardTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 776722FF2F6D9F5F0038D37C /* Build configuration list for PBXNativeTarget "bsphp.app.demo.cardTests" */;
-			buildPhases = (
-				776722E42F6D9F5F0038D37C /* Sources */,
-				776722E52F6D9F5F0038D37C /* Frameworks */,
-				776722E62F6D9F5F0038D37C /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				776722EA2F6D9F5F0038D37C /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				776722EB2F6D9F5F0038D37C /* bsphp.app.demo.cardTests */,
-			);
-			name = bsphp.app.demo.cardTests;
-			packageProductDependencies = (
-			);
-			productName = bsphp.app.demo.cardTests;
-			productReference = 776722E82F6D9F5F0038D37C /* bsphp.app.demo.cardTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		776722F12F6D9F5F0038D37C /* bsphp.app.demo.cardUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 776723022F6D9F5F0038D37C /* Build configuration list for PBXNativeTarget "bsphp.app.demo.cardUITests" */;
-			buildPhases = (
-				776722EE2F6D9F5F0038D37C /* Sources */,
-				776722EF2F6D9F5F0038D37C /* Frameworks */,
-				776722F02F6D9F5F0038D37C /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				776722F42F6D9F5F0038D37C /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				776722F52F6D9F5F0038D37C /* bsphp.app.demo.cardUITests */,
-			);
-			name = bsphp.app.demo.cardUITests;
-			packageProductDependencies = (
-			);
-			productName = bsphp.app.demo.cardUITests;
-			productReference = 776722F22F6D9F5F0038D37C /* bsphp.app.demo.cardUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		776722D02F6D9F5E0038D37C /* Project object */ = {
+		A1B2C3D92E5F60718293A4B5 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1610;
 				LastUpgradeCheck = 1610;
 				TargetAttributes = {
-					776722D72F6D9F5E0038D37C = {
+					A1B2C3D62E5F60718293A4B5 = {
 						CreatedOnToolsVersion = 16.1;
-					};
-					776722E72F6D9F5F0038D37C = {
-						CreatedOnToolsVersion = 16.1;
-						TestTargetID = 776722D72F6D9F5E0038D37C;
-					};
-					776722F12F6D9F5F0038D37C = {
-						CreatedOnToolsVersion = 16.1;
-						TestTargetID = 776722D72F6D9F5E0038D37C;
 					};
 				};
 			};
-			buildConfigurationList = 776722D32F6D9F5E0038D37C /* Build configuration list for PBXProject "bsphp.app.demo.card" */;
+			buildConfigurationList = A1B2C3DA2E5F60718293A4B5 /* Build configuration list for PBXProject "bsphp.app.demo.card" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = 776722CF2F6D9F5E0038D37C;
+			mainGroup = A1B2C3D42E5F60718293A4B5;
 			minimizedProjectReferenceProxies = 1;
 			preferredProjectObjectVersion = 77;
-			productRefGroup = 776722D92F6D9F5E0038D37C /* Products */;
+			productRefGroup = A1B2C3D52E5F60718293A4B5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				776722D72F6D9F5E0038D37C /* bsphp.app.demo.card */,
-				776722E72F6D9F5F0038D37C /* bsphp.app.demo.cardTests */,
-				776722F12F6D9F5F0038D37C /* bsphp.app.demo.cardUITests */,
+				A1B2C3D62E5F60718293A4B5 /* bsphp.app.demo.card */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		776722D62F6D9F5E0038D37C /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		776722E62F6D9F5F0038D37C /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		776722F02F6D9F5F0038D37C /* Resources */ = {
+		A1B2C3D82E5F60718293A4B5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -232,21 +115,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		776722D42F6D9F5E0038D37C /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		776722E42F6D9F5F0038D37C /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		776722EE2F6D9F5F0038D37C /* Sources */ = {
+		A1B2C3D72E5F60718293A4B5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -255,21 +124,8 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		776722EA2F6D9F5F0038D37C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 776722D72F6D9F5E0038D37C /* bsphp.app.demo.card */;
-			targetProxy = 776722E92F6D9F5F0038D37C /* PBXContainerItemProxy */;
-		};
-		776722F42F6D9F5F0038D37C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 776722D72F6D9F5E0038D37C /* bsphp.app.demo.card */;
-			targetProxy = 776722F32F6D9F5F0038D37C /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin XCBuildConfiguration section */
-		776722FA2F6D9F5F0038D37C /* Debug */ = {
+		A1B2C3DB2E5F60718293A4B5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -321,7 +177,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -332,7 +188,7 @@
 			};
 			name = Debug;
 		};
-		776722FB2F6D9F5F0038D37C /* Release */ = {
+		A1B2C3DC2E5F60718293A4B5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -378,7 +234,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -388,7 +244,7 @@
 			};
 			name = Release;
 		};
-		776722FD2F6D9F5F0038D37C /* Debug */ = {
+		A1B2C3DD2E5F60718293A4B5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -398,11 +254,11 @@
 				DEVELOPMENT_ASSET_PATHS = "\"bsphp.app.demo.card/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "BSPHP卡演示";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -410,13 +266,15 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "zez.bsphp-app-demo-card";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
-		776722FE2F6D9F5F0038D37C /* Release */ = {
+		A1B2C3DF2E5F60718293A4B5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -426,11 +284,11 @@
 				DEVELOPMENT_ASSET_PATHS = "\"bsphp.app.demo.card/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "BSPHP卡演示";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -438,120 +296,36 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "zez.bsphp-app-demo-card";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		776723002F6D9F5F0038D37C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "zez.bsphp-app-demo-cardTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/bsphp.app.demo.card.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/bsphp.app.demo.card";
-			};
-			name = Debug;
-		};
-		776723012F6D9F5F0038D37C /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "zez.bsphp-app-demo-cardTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/bsphp.app.demo.card.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/bsphp.app.demo.card";
-			};
-			name = Release;
-		};
-		776723032F6D9F5F0038D37C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "zez.bsphp-app-demo-cardUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = bsphp.app.demo.card;
-			};
-			name = Debug;
-		};
-		776723042F6D9F5F0038D37C /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "zez.bsphp-app-demo-cardUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = bsphp.app.demo.card;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		776722D32F6D9F5E0038D37C /* Build configuration list for PBXProject "bsphp.app.demo.card" */ = {
+		A1B2C3DA2E5F60718293A4B5 /* Build configuration list for PBXProject "bsphp.app.demo.card" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				776722FA2F6D9F5F0038D37C /* Debug */,
-				776722FB2F6D9F5F0038D37C /* Release */,
+				A1B2C3DB2E5F60718293A4B5 /* Debug */,
+				A1B2C3DC2E5F60718293A4B5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		776722FC2F6D9F5F0038D37C /* Build configuration list for PBXNativeTarget "bsphp.app.demo.card" */ = {
+		A1B2C3DE2E5F60718293A4B5 /* Build configuration list for PBXNativeTarget "bsphp.app.demo.card" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				776722FD2F6D9F5F0038D37C /* Debug */,
-				776722FE2F6D9F5F0038D37C /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		776722FF2F6D9F5F0038D37C /* Build configuration list for PBXNativeTarget "bsphp.app.demo.cardTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				776723002F6D9F5F0038D37C /* Debug */,
-				776723012F6D9F5F0038D37C /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		776723022F6D9F5F0038D37C /* Build configuration list for PBXNativeTarget "bsphp.app.demo.cardUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				776723032F6D9F5F0038D37C /* Debug */,
-				776723042F6D9F5F0038D37C /* Release */,
+				A1B2C3DD2E5F60718293A4B5 /* Debug */,
+				A1B2C3DF2E5F60718293A4B5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 776722D02F6D9F5E0038D37C /* Project object */;
+	rootObject = A1B2C3D92E5F60718293A4B5 /* Project object */;
 }

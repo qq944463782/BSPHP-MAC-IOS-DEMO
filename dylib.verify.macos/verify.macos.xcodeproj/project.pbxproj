@@ -1,0 +1,446 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 54;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		MACB001 /* Config.m in Sources */ = {isa = PBXBuildFile; fileRef = MACF002 /* Config.m */; };
+		MACB002 /* BSPHPCryptoObjC.m in Sources */ = {isa = PBXBuildFile; fileRef = MACF004 /* BSPHPCryptoObjC.m */; };
+		MACB003 /* BSPHPClientObjC.m in Sources */ = {isa = PBXBuildFile; fileRef = MACF006 /* BSPHPClientObjC.m */; };
+		MACB004 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = MACF007 /* Foundation.framework */; };
+		MACB005 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = MACF008 /* Security.framework */; };
+		MACB006 /* BSPHPCryptoObjC.h in Headers */ = {isa = PBXBuildFile; fileRef = MACF003 /* BSPHPCryptoObjC.h */; };
+		MACB007 /* BSPHPClientObjC.h in Headers */ = {isa = PBXBuildFile; fileRef = MACF005 /* BSPHPClientObjC.h */; };
+		MACB008 /* Config.h in Headers */ = {isa = PBXBuildFile; fileRef = MACF001 /* Config.h */; };
+		MACB009 /* entry.m in Sources */ = {isa = PBXBuildFile; fileRef = MACF011 /* entry.m */; };
+		MACB010 /* UserInfoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = MACF013 /* UserInfoManager.m */; };
+		MACB011 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = MACF014 /* AppKit.framework */; };
+		MACB012 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = MACF015 /* IOKit.framework */; };
+		VHBF001 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = VHFR002 /* AppDelegate.m */; };
+		VHBF002 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = VHFR003 /* main.m */; };
+		VHBF003 /* Foundation.framework in VerifyHost Frameworks */ = {isa = PBXBuildFile; fileRef = MACF007 /* Foundation.framework */; };
+		VHBF004 /* AppKit.framework in VerifyHost Frameworks */ = {isa = PBXBuildFile; fileRef = MACF014 /* AppKit.framework */; };
+		VHBF005 /* verify.macos.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = MACF009 /* verify.macos.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		MACF001 /* Config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
+		MACF002 /* Config.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Config.m; sourceTree = "<group>"; };
+		MACF003 /* BSPHPCryptoObjC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BSPHPCryptoObjC.h; sourceTree = "<group>"; };
+		MACF004 /* BSPHPCryptoObjC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BSPHPCryptoObjC.m; sourceTree = "<group>"; };
+		MACF005 /* BSPHPClientObjC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BSPHPClientObjC.h; sourceTree = "<group>"; };
+		MACF006 /* BSPHPClientObjC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BSPHPClientObjC.m; sourceTree = "<group>"; };
+		MACF007 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		MACF008 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		MACF009 /* verify.macos.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = verify.macos.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		MACF010 /* entry.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = entry.h; sourceTree = "<group>"; };
+		MACF011 /* entry.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = entry.m; sourceTree = "<group>"; };
+		MACF012 /* UserInfoManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserInfoManager.h; sourceTree = "<group>"; };
+		MACF013 /* UserInfoManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserInfoManager.m; sourceTree = "<group>"; };
+		MACF014 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		MACF015 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		VHFR001 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		VHFR002 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		VHFR003 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		VHFR004 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		VHFR005 /* VerifyHost.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VerifyHost.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		MACPH02 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				MACB004 /* Foundation.framework in Frameworks */,
+				MACB005 /* Security.framework in Frameworks */,
+				MACB011 /* AppKit.framework in Frameworks */,
+				MACB012 /* IOKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		VHPH03 /* Copy verify.macos.dylib */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 6;
+			files = (
+				VHBF005 /* verify.macos.dylib in CopyFiles */,
+			);
+			name = "Copy verify.macos.dylib";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXGroup section */
+		MACG001 = {
+			isa = PBXGroup;
+			children = (
+				MACG002 /* verify.macos */,
+				MACG007 /* VerifyHost */,
+				MACG003 /* Frameworks */,
+				MACG004 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		MACG007 /* VerifyHost */ = {
+			isa = PBXGroup;
+			children = (
+				VHFR001 /* AppDelegate.h */,
+				VHFR002 /* AppDelegate.m */,
+				VHFR003 /* main.m */,
+				VHFR004 /* Info.plist */,
+			);
+			path = VerifyHost;
+			sourceTree = "<group>";
+		};
+		MACG002 /* verify.macos */ = {
+			isa = PBXGroup;
+			children = (
+				MACF010 /* entry.h */,
+				MACF011 /* entry.m */,
+				MACG005 /* NetTool */,
+			);
+			path = verify.macos;
+			sourceTree = "<group>";
+		};
+		MACG005 /* NetTool */ = {
+			isa = PBXGroup;
+			children = (
+				MACF001 /* Config.h */,
+				MACF002 /* Config.m */,
+				MACF003 /* BSPHPCryptoObjC.h */,
+				MACF004 /* BSPHPCryptoObjC.m */,
+				MACF005 /* BSPHPClientObjC.h */,
+				MACF006 /* BSPHPClientObjC.m */,
+				MACF012 /* UserInfoManager.h */,
+				MACF013 /* UserInfoManager.m */,
+			);
+			path = NetTool;
+			sourceTree = "<group>";
+		};
+		MACG003 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				MACF007 /* Foundation.framework */,
+				MACF008 /* Security.framework */,
+				MACF014 /* AppKit.framework */,
+				MACF015 /* IOKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		MACG004 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				MACF009 /* verify.macos.dylib */,
+				VHFR005 /* VerifyHost.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		MACPH03 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				MACB006 /* BSPHPCryptoObjC.h in Headers */,
+				MACB007 /* BSPHPClientObjC.h in Headers */,
+				MACB008 /* Config.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		MACNT01 /* verify.macos */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = MACCL02 /* Build configuration list for PBXNativeTarget "verify.macos" */;
+			buildPhases = (
+				MACPH01 /* Sources */,
+				MACPH02 /* Frameworks */,
+				MACPH03 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "verify.macos";
+			productName = "verify.macos";
+			productReference = MACF009 /* verify.macos.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+		VHOST01 /* VerifyHost */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = VHCLLIST /* Build configuration list for PBXNativeTarget "VerifyHost" */;
+			buildPhases = (
+				VHPH01 /* Sources */,
+				VHPH02 /* Frameworks */,
+				VHPH03 /* Copy verify.macos.dylib */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				VHTD01 /* PBXTargetDependency */,
+			);
+			name = VerifyHost;
+			productName = VerifyHost;
+			productReference = VHFR005 /* VerifyHost.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXContainerItemProxy section */
+		VHPR01 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = MACPR01 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = MACNT01;
+			remoteInfo = "verify.macos";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXTargetDependency section */
+		VHTD01 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = MACNT01 /* verify.macos */;
+			targetProxy = VHPR01 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXProject section */
+		MACPR01 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					MACNT01 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+					VHOST01 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+				};
+			};
+			buildConfigurationList = MACCL01 /* Build configuration list for PBXProject "verify.macos" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = MACG001;
+			productRefGroup = MACG004 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				MACNT01 /* verify.macos */,
+				VHOST01 /* VerifyHost */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		MACPH01 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				MACB001 /* Config.m in Sources */,
+				MACB002 /* BSPHPCryptoObjC.m in Sources */,
+				MACB003 /* BSPHPClientObjC.m in Sources */,
+				MACB010 /* UserInfoManager.m in Sources */,
+				MACB009 /* entry.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		VHPH01 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				VHBF002 /* main.m in Sources */,
+				VHBF001 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		VHPH02 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				VHBF003 /* Foundation.framework in VerifyHost Frameworks */,
+				VHBF004 /* AppKit.framework in VerifyHost Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		MACCF01 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		MACCF02 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		MACCF03 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				EXECUTABLE_PREFIX = "";
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/verify.macos",
+					"$(PROJECT_DIR)/verify.macos/NetTool",
+				);
+				INSTALL_PATH = "";
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.company.verify.macos;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		MACCF04 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				EXECUTABLE_PREFIX = "";
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/verify.macos",
+					"$(PROJECT_DIR)/verify.macos/NetTool",
+				);
+				INSTALL_PATH = "";
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.company.verify.macos;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		VHCLHOST_DBG /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "";
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = VerifyHost/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = VerifyHost;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.company.verify.host;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		VHCLHOST_REL /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "";
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = VerifyHost/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = VerifyHost;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.company.verify.host;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		MACCL01 /* Build configuration list for PBXProject "verify.macos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				MACCF01 /* Debug */,
+				MACCF02 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		MACCL02 /* Build configuration list for PBXNativeTarget "verify.macos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				MACCF03 /* Debug */,
+				MACCF04 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		VHCLLIST /* Build configuration list for PBXNativeTarget "VerifyHost" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				VHCLHOST_DBG /* Debug */,
+				VHCLHOST_REL /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = MACPR01 /* Project object */;
+}
