@@ -11,6 +11,9 @@
 //
 
 import Foundation
+#if os(iOS)
+import AdSupport
+#endif
 #if canImport(IOKit)
 import IOKit
 #endif
@@ -98,11 +101,16 @@ final class BSPHPClient {
 
 
     /// 本机机器码（用于 login.ic 的 key、maxoror 参数）
+    /// iOS：与 `dylib.verify.oc` 一致使用 IDFA；macOS：IOKit 硬件 UUID；否则持久化 UUID。
     static var machineCode: String {
-        #if canImport(IOKit)
+        #if os(iOS)
+        return ASIdentifierManager.shared().advertisingIdentifier.uuidString
+        #elseif canImport(IOKit)
         if let uuid = BSPHPClient.hardwareUUID() { return uuid }
-        #endif
         return fallbackMachineCode
+        #else
+        return fallbackMachineCode
+        #endif
     }
 
     #if canImport(IOKit)

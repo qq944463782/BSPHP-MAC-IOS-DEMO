@@ -6,20 +6,50 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		A1BFBASE012F703C69008934D2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1FRBASE012F703C69008934D2 /* Foundation.framework */; };
+		A1FBSEC012F703C69008934D2 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1FRSEC012F703C69008934D2 /* Security.framework */; };
+		A1FBADS012F703C69008934D2 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1FRADS012F703C69008934D2 /* AdSupport.framework */; };
+		A1FBUIK012F703C69008934D2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1FRUIK012F703C69008934D2 /* UIKit.framework */; };
+		A1BFCOPY012F703C69008934D2 /* libdylib.ios.card.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 776F684B2F703C69008934D2 /* libdylib.ios.card.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		A1BFSRCVH012F703C69008934D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FRSWIFT012F703C69008934D2 /* AppDelegate.swift */; };
+		A1FBFH012F703C69008934D2 /* Foundation.framework in VerifyHost Frameworks */ = {isa = PBXBuildFile; fileRef = A1FRBASE012F703C69008934D2 /* Foundation.framework */; };
+		A1FBUH012F703C69008934D2 /* UIKit.framework in VerifyHost Frameworks */ = {isa = PBXBuildFile; fileRef = A1FRUIK012F703C69008934D2 /* UIKit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A1PROXY012F703C69008934D2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 776F68432F703C69008934D2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 776F684A2F703C69008934D2;
+			remoteInfo = "dylib.ios.card";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXCopyFilesBuildPhase section */
-		776F68492F703C69008934D2 /* CopyFiles */ = {
+		A1COPYDY012F703C69008934D2 /* Copy libdylib.ios.card.dylib */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
-			dstPath = "include/$(PRODUCT_NAME)";
-			dstSubfolderSpec = 16;
+			dstPath = "";
+			dstSubfolderSpec = 6;
 			files = (
+				A1BFCOPY012F703C69008934D2 /* libdylib.ios.card.dylib in CopyFiles */,
 			);
+			name = "Copy libdylib.ios.card.dylib";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		776F684B2F703C69008934D2 /* libdylib.ios.card.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libdylib.ios.card.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		776F684B2F703C69008934D2 /* libdylib.ios.card.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libdylib.ios.card.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1FRBASE012F703C69008934D2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		A1FRSEC012F703C69008934D2 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		A1FRADS012F703C69008934D2 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		A1FRUIK012F703C69008934D2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		A1VHAPP012F703C69008934D2 /* VerifyHost.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VerifyHost.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1FRSWIFT012F703C69008934D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A1FRPLIST012F703C69008934D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -35,6 +65,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1BFBASE012F703C69008934D2 /* Foundation.framework in Frameworks */,
+				A1FBSEC012F703C69008934D2 /* Security.framework in Frameworks */,
+				A1FBADS012F703C69008934D2 /* AdSupport.framework in Frameworks */,
+				A1FBUIK012F703C69008934D2 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1FWVH012F703C69008934D2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1FBFH012F703C69008934D2 /* Foundation.framework in VerifyHost Frameworks */,
+				A1FBUH012F703C69008934D2 /* UIKit.framework in VerifyHost Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -45,16 +88,39 @@
 			isa = PBXGroup;
 			children = (
 				776F684D2F703C69008934D2 /* dylib.ios.card */,
+				A1GRPVERIFY012F703C69008934D2 /* VerifyHost */,
 				776F684C2F703C69008934D2 /* Products */,
+				A1GRPFRAME012F703C69008934D2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		776F684C2F703C69008934D2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				776F684B2F703C69008934D2 /* libdylib.ios.card.a */,
+				776F684B2F703C69008934D2 /* libdylib.ios.card.dylib */,
+				A1VHAPP012F703C69008934D2 /* VerifyHost.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		A1GRPVERIFY012F703C69008934D2 /* VerifyHost */ = {
+			isa = PBXGroup;
+			children = (
+				A1FRSWIFT012F703C69008934D2 /* AppDelegate.swift */,
+				A1FRPLIST012F703C69008934D2 /* Info.plist */,
+			);
+			path = VerifyHost;
+			sourceTree = "<group>";
+		};
+		A1GRPFRAME012F703C69008934D2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A1FRBASE012F703C69008934D2 /* Foundation.framework */,
+				A1FRUIK012F703C69008934D2 /* UIKit.framework */,
+				A1FRSEC012F703C69008934D2 /* Security.framework */,
+				A1FRADS012F703C69008934D2 /* AdSupport.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -66,7 +132,6 @@
 			buildPhases = (
 				776F68472F703C69008934D2 /* Sources */,
 				776F68482F703C69008934D2 /* Frameworks */,
-				776F68492F703C69008934D2 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -75,12 +140,32 @@
 			fileSystemSynchronizedGroups = (
 				776F684D2F703C69008934D2 /* dylib.ios.card */,
 			);
-			name = dylib.ios.card;
+			name = "dylib.ios.card";
 			packageProductDependencies = (
 			);
-			productName = dylib.ios.card;
-			productReference = 776F684B2F703C69008934D2 /* libdylib.ios.card.a */;
-			productType = "com.apple.product-type.library.static";
+			productName = "dylib.ios.card";
+			productReference = 776F684B2F703C69008934D2 /* libdylib.ios.card.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+		A1VHNT012F703C69008934D2 /* VerifyHost */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A1CFGVH012F703C69008934D2 /* Build configuration list for PBXNativeTarget "VerifyHost" */;
+			buildPhases = (
+				A1SRCVH012F703C69008934D2 /* Sources */,
+				A1FWVH012F703C69008934D2 /* Frameworks */,
+				A1COPYDY012F703C69008934D2 /* Copy libdylib.ios.card.dylib */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A1DEPVH012F703C69008934D2 /* PBXTargetDependency */,
+			);
+			name = VerifyHost;
+			packageProductDependencies = (
+			);
+			productName = VerifyHost;
+			productReference = A1VHAPP012F703C69008934D2 /* VerifyHost.app */;
+			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
@@ -93,6 +178,9 @@
 				LastUpgradeCheck = 1610;
 				TargetAttributes = {
 					776F684A2F703C69008934D2 = {
+						CreatedOnToolsVersion = 16.1;
+					};
+					A1VHNT012F703C69008934D2 = {
 						CreatedOnToolsVersion = 16.1;
 					};
 				};
@@ -112,6 +200,7 @@
 			projectRoot = "";
 			targets = (
 				776F684A2F703C69008934D2 /* dylib.ios.card */,
+				A1VHNT012F703C69008934D2 /* VerifyHost */,
 			);
 		};
 /* End PBXProject section */
@@ -124,7 +213,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A1SRCVH012F703C69008934D2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1BFSRCVH012F703C69008934D2 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A1DEPVH012F703C69008934D2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 776F684A2F703C69008934D2 /* dylib.ios.card */;
+			targetProxy = A1PROXY012F703C69008934D2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		776F68502F703C69008934D2 /* Debug */ = {
@@ -250,9 +355,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				OTHER_LDFLAGS = "-ObjC";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				EXECUTABLE_PREFIX = lib;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+				);
+				PRODUCT_MODULE_NAME = dylib_ios_card;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "dylib_ios_card-Swift.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -262,9 +376,62 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				OTHER_LDFLAGS = "-ObjC";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				EXECUTABLE_PREFIX = lib;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+				);
+				PRODUCT_MODULE_NAME = dylib_ios_card;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "dylib_ios_card-Swift.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A1CFGVHDBG012F703C69008934D2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = VerifyHost/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = VerifyHost;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bsphp.dylib.ios.card.verifyhost;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A1CFGVHREL012F703C69008934D2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = VerifyHost/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = VerifyHost;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bsphp.dylib.ios.card.verifyhost;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -287,6 +454,15 @@
 			buildConfigurations = (
 				776F68532F703C69008934D2 /* Debug */,
 				776F68542F703C69008934D2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A1CFGVH012F703C69008934D2 /* Build configuration list for PBXNativeTarget "VerifyHost" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A1CFGVHDBG012F703C69008934D2 /* Debug */,
+				A1CFGVHREL012F703C69008934D2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
