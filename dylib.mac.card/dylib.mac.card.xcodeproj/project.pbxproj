@@ -8,7 +8,22 @@
 
 /* Begin PBXFileReference section */
 		776F685E2F703C97008934D2 /* libdylib.mac.card.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libdylib.mac.card.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A8B0010 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		7A8B0011 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		7A8B0012 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7A8B0013 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7A8B0014 /* VerifyHost.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VerifyHost.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A8B0060 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		7A8B0061 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
+
+/* Begin PBXBuildFile section */
+		7A8B0001 /* libdylib.mac.card.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 776F685E2F703C97008934D2 /* libdylib.mac.card.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		7A8B0002 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A8B0011 /* AppDelegate.m */; };
+		7A8B0003 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A8B0012 /* main.m */; };
+		7A8B0004 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A8B0060 /* Foundation.framework */; };
+		7A8B0005 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A8B0061 /* AppKit.framework */; };
+/* End PBXBuildFile section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		776F68602F703C97008934D2 /* dylib.mac.card */ = {
@@ -28,19 +43,56 @@
 		};
 /* End PBXFrameworksBuildPhase section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		7A8B0020 /* Copy libdylib.mac.card.dylib */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 6;
+			files = (
+				7A8B0001 /* libdylib.mac.card.dylib in CopyFiles */,
+			);
+			name = "Copy libdylib.mac.card.dylib";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXGroup section */
 		776F68552F703C97008934D2 = {
 			isa = PBXGroup;
 			children = (
 				776F68602F703C97008934D2 /* dylib.mac.card */,
+				7A8B0021 /* VerifyHost */,
+				7A8B0062 /* Frameworks */,
 				776F685F2F703C97008934D2 /* Products */,
 			);
+			sourceTree = "<group>";
+		};
+		7A8B0021 /* VerifyHost */ = {
+			isa = PBXGroup;
+			children = (
+				7A8B0010 /* AppDelegate.h */,
+				7A8B0011 /* AppDelegate.m */,
+				7A8B0012 /* main.m */,
+				7A8B0013 /* Info.plist */,
+			);
+			path = VerifyHost;
+			sourceTree = "<group>";
+		};
+		7A8B0062 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7A8B0060 /* Foundation.framework */,
+				7A8B0061 /* AppKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		776F685F2F703C97008934D2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
 				776F685E2F703C97008934D2 /* libdylib.mac.card.dylib */,
+				7A8B0014 /* VerifyHost.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -80,7 +132,45 @@
 			productReference = 776F685E2F703C97008934D2 /* libdylib.mac.card.dylib */;
 			productType = "com.apple.product-type.library.dynamic";
 		};
+		7A8B0030 /* VerifyHost */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7A8B0052 /* Build configuration list for PBXNativeTarget "VerifyHost" */;
+			buildPhases = (
+				7A8B0022 /* Sources */,
+				7A8B0023 /* Frameworks */,
+				7A8B0020 /* Copy libdylib.mac.card.dylib */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7A8B0041 /* PBXTargetDependency */,
+			);
+			name = VerifyHost;
+			packageProductDependencies = (
+			);
+			productName = VerifyHost;
+			productReference = 7A8B0014 /* VerifyHost.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
+
+/* Begin PBXContainerItemProxy section */
+		7A8B0040 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 776F68562F703C97008934D2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 776F685D2F703C97008934D2;
+			remoteInfo = "dylib.mac.card";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXTargetDependency section */
+		7A8B0041 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 776F685D2F703C97008934D2 /* dylib.mac.card */;
+			targetProxy = 7A8B0040 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXProject section */
 		776F68562F703C97008934D2 /* Project object */ = {
@@ -90,6 +180,9 @@
 				LastUpgradeCheck = 1610;
 				TargetAttributes = {
 					776F685D2F703C97008934D2 = {
+						CreatedOnToolsVersion = 16.1;
+					};
+					7A8B0030 = {
 						CreatedOnToolsVersion = 16.1;
 					};
 				};
@@ -109,6 +202,7 @@
 			projectRoot = "";
 			targets = (
 				776F685D2F703C97008934D2 /* dylib.mac.card */,
+				7A8B0030 /* VerifyHost */,
 			);
 		};
 /* End PBXProject section */
@@ -122,6 +216,30 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7A8B0022 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A8B0003 /* main.m in Sources */,
+				7A8B0002 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7A8B0023 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A8B0004 /* Foundation.framework in Frameworks */,
+				7A8B0005 /* AppKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
 		776F68652F703C97008934D2 /* Debug */ = {
@@ -287,6 +405,48 @@
 			};
 			name = Release;
 		};
+		7A8B0050 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = VerifyHost/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = VerifyHost;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.6;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bsphp.dylib.mac.card.verifyhost;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		7A8B0051 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = VerifyHost/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = VerifyHost;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.6;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bsphp.dylib.mac.card.verifyhost;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -304,6 +464,15 @@
 			buildConfigurations = (
 				776F68682F703C97008934D2 /* Debug */,
 				776F68692F703C97008934D2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7A8B0052 /* Build configuration list for PBXNativeTarget "VerifyHost" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7A8B0050 /* Debug */,
+				7A8B0051 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

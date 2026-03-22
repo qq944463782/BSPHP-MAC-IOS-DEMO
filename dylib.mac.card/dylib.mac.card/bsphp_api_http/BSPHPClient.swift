@@ -95,7 +95,15 @@ final class BSPHPClient {
         return f
     }()
 
-
+    /// `JSONSerialization` 里数值多为 `NSNumber`，直接 `as? Int` 常为 `nil`，会导致 `login.ic` 等接口误判失败、且不更新 `SeSsL`。
+    private static func intFromJSON(_ any: Any?) -> Int? {
+        switch any {
+        case let i as Int: return i
+        case let n as NSNumber: return n.intValue
+        case let s as String: return Int(s)
+        default: return nil
+        }
+    }
 
     /// 本机机器码（用于 login.ic 的 key、maxoror 参数）
     static var machineCode: String {
@@ -306,7 +314,7 @@ final class BSPHPClient {
 
     /// 注销登录（cancellation.ic），成功后清空会话并重新获取 SeSsL
     func logout() async -> BSPHPAPIResult {
-        let r = (try? await send(api: "cancellation.ic")).map { BSPHPAPIResult(data: $0["data"], code: $0["code"] as? Int) } ?? BSPHPAPIResult(data: nil, code: nil)
+        let r = (try? await send(api: "cancellation.ic")).map { BSPHPAPIResult(data: $0["data"], code: Self.intFromJSON($0["code"])) } ?? BSPHPAPIResult(data: nil, code: nil)
         bsPhpSeSsL = ""
         _ = try? await getSeSsL()
         return r
@@ -319,7 +327,7 @@ final class BSPHPClient {
         guard let r = try? await send(api: api, params: params) else {
             return BSPHPAPIResult(data: nil, code: nil)
         }
-        return BSPHPAPIResult(data: r["data"], code: r["code"] as? Int)
+        return BSPHPAPIResult(data: r["data"], code: Self.intFromJSON(r["code"]))
     }
 
     /// AddCardFeatures.key.ic — carid / key / maxoror
@@ -499,10 +507,12 @@ final class BSPHPClient {
         guard let r = try? await send(api: "login.ic", params: params) else {
             return BSPHPAPIResult(data: "系统错误，登录失败！", code: nil)
         }
-        if let c = r["code"] as? Int, (c == 1011 || c == 9908 || c == 1081), let ssl = r["SeSsL"] as? String {
+        if let c = Self.intFromJSON(r["code"]),
+           (c == 1011 || c == 9908 || c == 1081 || c == 200),
+           let ssl = r["SeSsL"] as? String, !ssl.isEmpty {
             bsPhpSeSsL = ssl
         }
-        return BSPHPAPIResult(data: r["data"], code: r["code"] as? Int)
+        return BSPHPAPIResult(data: r["data"], code: Self.intFromJSON(r["code"]))
     }
 
     /// liuyan.in — table / leix / qq / txt / img / user / pwd
