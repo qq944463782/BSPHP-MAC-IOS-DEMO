@@ -25,7 +25,7 @@ import AppKit
 //-------------------------------------------------------------------必须配置--------------------------------------------------------------------------------------------------
 //服务器地址
 // MARK: - API 配置（可改为你的服务端地址）
-private let kBSPHPURL = "http://demo.bsphp.com:8000/AppEn.php?appid=8888888&m=95e87faf2f6e41babddaef60273489e1&lang=0"
+private let kBSPHPURL = "https://demo.bsphp.com/AppEn.php?appid=8888888&m=95e87faf2f6e41babddaef60273489e1&lang=0"
 //通信 KEY（mutualkey）
 private let kBSPHPMutualKey = "6600cfcd5ac01b9bb3f2460eb416daa8"
 //服务器私钥 Base64（用于 AES 密钥派生、响应解密）
@@ -39,7 +39,7 @@ private let kBSPHPClientPublicKey = "MIIBHjANBgkqhkiG9w0BAQEFAAOCAQsAMIIBBgKB/g2
 
 
 //图片验证码地址,修改自己地址就可以
-private let kBSPHPCodeURL = "http://demo.bsphp.com:8000/index.php?m=coode&sessl="
+private let kBSPHPCodeURL = "https://demo.bsphp.com/index.php?m=coode&sessl="
 
 
 //-----------------------------------------------------------------------WEBAPI页面地址用不到忽略----------------------------------------------------------------------------------------------
