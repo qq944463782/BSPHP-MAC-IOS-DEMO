@@ -418,7 +418,9 @@ struct ContentView: View {
                 }
                 .padding(.top, 6)
                 .tint(.accentColor)
+                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
             }
+            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
             .background(
                 RoundedRectangle(cornerRadius: 12, style: .continuous)
                     .fill(Color(NSColor.controlBackgroundColor).opacity(0.6))
