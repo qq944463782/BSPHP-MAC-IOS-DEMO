@@ -2,13 +2,15 @@
 
 [www.bsphp.com](https://www.bsphp.com)
 
+[BSPHP](https://www.bsphp.com) 为软件会员/订阅与授权管理方案，支持账号密码注册、充值卡激活等多种方式。
+
 ---
 
 ## 目录 · Table of contents
 
 | Language | Section |
 |----------|---------|
-| 简体中文 | [简体中文](#简体中文) |
+| 简体中文 | [简体中文](#简体中文) | 
 | 繁體中文 | [繁體中文](#繁體中文) |
 | English | [English](#english) |
 
